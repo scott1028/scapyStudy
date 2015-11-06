@@ -2,8 +2,6 @@
 
 from scapy.all import *
 
-print HTTP_REQUEST
-
 # 先作三方握手
 syn = IP(dst='www.google.com') / TCP(dport=80, flags='S', sport=16666)
 syn_ack = sr1(syn)
